@@ -1,0 +1,120 @@
+// 1. Declare an int variable age and assign your age. Print it.
+void main() {
+  int age = 22;
+  print("My age is $age");
+
+  // 2. Create a String variable name and print
+  String name = "Alice";
+  print("My name is $name");
+
+  // 3. Declare two numbers and find their sum
+  int a = 5, b = 7;
+  print("Sum: ${a + b}");
+
+  // 4. Simple Interest = (P × R × T) / 100
+  double P = 1000, R = 5, T = 2;
+  double SI = (P * R * T) / 100;
+  print("Simple Interest: $SI");
+
+  // 5. Area of Rectangle
+  double length = 10, width = 5;
+  double area = length * width;
+  print("Area of rectangle: $area");
+
+  // 6. Compare two numbers
+  int num1 = 8, num2 = 12;
+  if (num1 > num2) {
+    print("$num1 is greater than $num2");
+  } else if (num1 < num2) {
+    print("$num1 is smaller than $num2");
+  } else {
+    print("$num1 is equal to $num2");
+  }
+
+  // 7. Square and Cube
+  int n = 4;
+  print("Square: ${n * n}, Cube: ${n * n * n}");
+
+  // 8. Leap year check
+  int year = 2024;
+  if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
+    print("$year is a leap year");
+  } else {
+    print("$year is not a leap year");
+  }
+
+  // 9. Divisible by 5 and 11
+  int num = 55;
+  if (num % 5 == 0 && num % 11 == 0) {
+    print("$num is divisible by 5 and 11");
+  } else {
+    print("$num is not divisible by 5 and 11");
+  }
+
+  // 10. Largest among three numbers
+  int x = 20, y = 15, z = 25;
+  int largest = (x > y) ? (x > z ? x : z) : (y > z ? y : z);
+  print("Largest: $largest");
+
+  // 11. Grade calculation
+  int marks = 85;
+  if (marks >= 90 && marks <= 100) {
+    print("Grade: A");
+  } else if (marks >= 80) {
+    print("Grade: B");
+  } else if (marks >= 70) {
+    print("Grade: C");
+  } else {
+    print("Grade: Fail");
+  }
+
+  // 12. List of student names
+  List<String> students = ["Alice", "Bob", "Charlie", "David", "Eve"];
+  for (int i = 0; i < students.length; i++) {
+    print("Index $i: ${students[i]}");
+  }
+
+  // 13. Sum of list numbers
+  List<int> numbers = [1, 2, 3, 4, 5];
+  int total = numbers.reduce((a, b) => a + b);
+  print("Sum of list: $total");
+
+  // 14. Remove duplicates using Set
+  List<int> nums = [1, 2, 2, 3, 4, 4, 5];
+  List<int> uniqueNums = nums.toSet().toList();
+  print("Unique numbers: $uniqueNums");
+
+  // 15. Employee details using Map
+  Map<String, dynamic> employee = {
+    "id": 101,
+    "name": "Alice",
+    "salary": 50000
+  };
+  employee.forEach((key, value) {
+    print("$key: $value");
+  });
+
+  // 16. Factorial function
+  int factorial(int n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
+  }
+  print("Factorial of 5: ${factorial(5)}");
+
+  // 17. Average function
+  double average(List<int> nums) {
+    int sum = nums.reduce((a, b) => a + b);
+    return sum / nums.length;
+  }
+  print("Average: ${average([10, 20, 30, 40, 50])}");
+
+  // 18. Prime check function
+  bool isPrime(int n) {
+    if (n <= 1) return false;
+    for (int i = 2; i <= n ~/ 2; i++) {
+      if (n % i == 0) return false;
+    }
+    return true;
+  }
+  print("Is 17 prime? ${isPrime(17)}");
+}
