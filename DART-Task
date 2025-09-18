@@ -1,10 +1,10 @@
 // 1. Declare an int variable age and assign your age. Print it.
 void main() {
-  int age = 22;
+  int age = 17;
   print("My age is $age");
 
   // 2. Create a String variable name and print
-  String name = "Alice";
+  String name = "haifa";
   print("My name is $name");
 
   // 3. Declare two numbers and find their sum
